@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise for Group 1</title>
+    <script>
+        
+    
+        let check = () => {
+            let count = 0;
+            let arr = document.getElementsByTagName('input');
+            if (arr[0].value == "has been used" || arr[0].value == "has just been used"){
+                count++;
+            }
+            if (arr[1].value == "was taken"){
+                count++;
+            }
+            if (arr[2].value == "was drawed by my teacher"){
+                count++;
+            }
+            if (count == 3){
+                alert("Congratulation, You finished the test. Let's call the presenter")
+            }
+            else {
+                alert("Oh no, you have " +(3-count)+ " mistake. Let's check again");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        This phone <input style = "width : 100px"> (use) by my mother for a month
+    </div>
+    <div>
+        This photo <input style = "width: 100px"> (take) by my brother last year
+    </div>
+    _____________________________________________________________
+    <div>
+        My teacher drawed this painting
+        <br>
+        &RightArrow; This painting <input style = "width: 200px">
+    </div>
+    <input type = "button" onclick = check() value = "submit">
+</body>
+</html>
